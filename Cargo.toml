@@ -10,14 +10,7 @@ repository = "https://github.com/nini22P/tauri-plugin-libmpv"
 keywords = ["tauri", "plugin", "mpv", "media", "player"]
 categories = ["multimedia", "gui"]
 readme = "README.md"
-exclude = [
-  "/examples",
-  "/dist-js",
-  "/guest-js",
-  "/node_modules",
-  "/target",
-  "/codegen",
-]
+exclude = ["/dist-js", "/guest-js", "/node_modules", "/target", "/codegen"]
 links = "tauri-plugin-libmpv"
 
 [dependencies]
@@ -43,4 +36,3 @@ tauri-plugin = { version = "2.5.1", features = ["build"] }
 
 [workspace]
 members = ["codegen"]
-exclude = ["examples/react/src-tauri"]
