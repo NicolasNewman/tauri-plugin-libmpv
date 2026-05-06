@@ -420,6 +420,10 @@ impl<R: Runtime> Mpv<R> {
                     search_dirs.push(exe_dir.join("lib"));
                 }
             }
+            if let Ok(resource_dir) = self.app.path().resource_dir() {
+                search_dirs.push(resource_dir.to_path_buf());
+                search_dirs.push(resource_dir.join("lib"));
+            }
 
             let valid_lib_path: String = search_dirs
                 .iter()
